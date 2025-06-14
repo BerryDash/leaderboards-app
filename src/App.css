@@ -1,0 +1,9 @@
+body {
+  color: white;
+  background-color: #121212;
+  font-family: 'Lexend';
+}
+
+.macos-body {
+  background-color: transparent !important;
+}
