@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import "./App.css"
-import '@fontsource/lexend'
+import "@fontsource/lexend"
 import { platform } from "@tauri-apps/plugin-os"
 
 function App() {
@@ -10,7 +10,12 @@ function App() {
 
   useEffect(() => {
     if (initialized.current) return;
-    if (platform() == 'macos') document.body.classList.add('macos-body')
+    if (platform() == "macos") document.body.classList.add("macos-body");
+    if (platform() == "ios" || platform() == "android") {
+      document.body.classList.add("mobile");
+    } else {
+      document.body.classList.add("desktop");
+    }
     refresh();
     initialized.current = true;
   }, [])
@@ -44,7 +49,7 @@ function App() {
           {players.map(([user, score], i) => (
             <div className="item" key={i}>
               <span>{user}</span>
-              <span>{Number(score).toLocaleString()}</span>
+              <span style={{ fontWeight: "bold" }}>{Number(score).toLocaleString()}</span>
             </div>
           ))}
         </div>

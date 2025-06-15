@@ -44,20 +44,21 @@ button:active {
   white-space: nowrap;
 }
 
-.list {
+.mobile .list {
   background-color: #484848;
   border-radius: 16px;
   padding: 16px 0px;
+  margin-top: 4rem;
 }
 
-.list .item {
+.mobile .list .item {
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
   position: relative;
 }
 
-.list .item + .item::before {
+.mobile .list .item + .item::before {
   content: "";
   position: absolute;
   top: -16px;
@@ -67,6 +68,33 @@ button:active {
   background-color: rgb(128, 128, 128);
 }
 
-.list .item + .item {
+.mobile .list .item + .item {
   margin-top: 32px;
+}
+
+.desktop .list {
+  font-size: 16px;
+  border-radius: 16px;
+  margin-top: 4rem;
+}
+
+.desktop .list .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: relative;
+}
+
+.desktop .list .item + .item::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  background-color: rgb(128, 128, 128);
+}
+
+.desktop .list .item + .item {
+  margin-top: 16px;
 }
