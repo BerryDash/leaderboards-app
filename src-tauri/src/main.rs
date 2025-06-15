@@ -9,11 +9,15 @@ fn main() {
             #[cfg(target_os = "macos")]
             {
                 use tauri::Manager;
-                use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial};
+                use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial, NSVisualEffectState};
 
                 let window = app.get_webview_window("main").unwrap();
-                apply_vibrancy(&window, NSVisualEffectMaterial::HudWindow, None, None)
-                    .expect("Unsupported platform! 'apply_vibrancy' is only supported on macOS");
+                apply_vibrancy(
+                    &window,
+                    NSVisualEffectMaterial::UnderWindowBackground,
+                    Some(NSVisualEffectState::Active),
+                    None
+                ).expect("failed to apply vibrancy");
             }
             Ok(())
         })
