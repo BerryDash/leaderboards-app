@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   const refresh = async () => {
-    setStatus("Loading")
+    setStatus("Loading...")
     setPlayers([]);
     try {
       const res = await fetch("https://berrydash.lncvrt.xyz/database/getTopPlayersAPI.php")

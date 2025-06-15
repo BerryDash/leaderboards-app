@@ -3,6 +3,7 @@ body {
   background-color: #242424;
   font-family: 'Lexend';
   user-select: none;
+  font-size: 12px;
 }
 
 button {
@@ -32,7 +33,7 @@ button:active {
 .top span {
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 20px;
   transform: translateX(-50%);
   white-space: nowrap;
 }
@@ -73,7 +74,6 @@ button:active {
 }
 
 .desktop .list {
-  font-size: 16px;
   border-radius: 16px;
   margin-top: 4rem;
 }
@@ -91,8 +91,8 @@ button:active {
   top: -8px;
   left: 8px;
   right: 8px;
-  height: 1px;
-  background-color: rgb(128, 128, 128);
+  height: 0.5px;
+  background-color: rgb(100, 100, 100);
 }
 
 .desktop .list .item + .item {
