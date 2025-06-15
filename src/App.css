@@ -1,9 +1,57 @@
 body {
   color: white;
-  background-color: #121212;
+  background-color: #242424;
   font-family: 'Lexend';
+  user-select: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: #484848;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
 
 .macos-body {
   background-color: transparent !important;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.top span {
+  flex: 1;
+  text-align: center;
+}
+
+.list {
+  background-color: #484848;
+  border-radius: 16px;
+  padding: 16px 0px;
+}
+
+.list .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: relative;
+}
+
+.list .item + .item::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: rgb(128, 128, 128);
+}
+
+.list .item + .item {
+  margin-top: 32px;
 }
